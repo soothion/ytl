@@ -29,7 +29,7 @@
   line-height: 37px;
   height: 39px;
   overflow: hidden;
-  background: url("img/pro-slide-button.png") no-repeat 0px -105px;
+  background: url("<?php echo APP_PATH;?>statics/ytl/img/pro-slide-button.png") no-repeat 0px -105px;
 }
 .hot a{
   color: red;

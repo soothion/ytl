@@ -59,7 +59,7 @@
             </div>
             <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
             <?php } else { ?>
-            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=9e5d64f4ed0a362b989de57e5dfbafd1&action=lists&status=99&catid=%24r%5Bcatid%5D&num=10&order=listorder+ASC%2C+inputtime+DESC&return=subcon\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$subcon = $content_tag->lists(array('status'=>'99','catid'=>$r[catid],'order'=>'listorder ASC, inputtime DESC','limit'=>'10',));}?>
+            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=368e47b694655edbef0ce5ae0e8476c0&action=position&posid=10&catid=%24r%5Bcatid%5D&num=10&order=listorder+ASC&return=subcon\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$subcon = $content_tag->position(array('posid'=>'10','catid'=>$r[catid],'order'=>'listorder ASC','limit'=>'10',));}?>
               <?php if($subcon) { ?>
               <div class="subNavBox" style="display: none;">
                 <dl class="subnav">
