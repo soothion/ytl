@@ -1,0 +1,99 @@
+{template "content","header"}
+  <!-- 标准头结束位置 -->
+  <div class="HomeBan">
+    <div class="BanList">
+      <div id="viewport-shadow">
+        <a href="#" id="prev" title="Prev"></a>
+        <a href="#" id="next" title="Next"></a>
+        <div id="viewport" style="height: 474px;">
+          {pc:get sql="SELECT pictureurls FROM v9_picture_data WHERE id='1'" cache="3600" return="data"}
+          <div id="box" style="position: relative; height: 474px; overflow: hidden;" class="">
+            <!-- 产品链接Banner图-->
+            {loop $data $val}
+              <?php
+                  $pictureurls=$val['pictureurls'];
+                  $pictureurls=string2array($pictureurls);
+              ?>
+              {loop $pictureurls $pic}
+            <div class="slide" style="top: 0px; position: absolute; display: block;">
+              <a href="{$pic[url]}" class="btn-video fancybox.iframe" style=" background:url({$pic[url]}) no-repeat center top;"></a>
+            </div>
+              {/loop}
+            {/loop}
+
+          </div>
+          {/pc}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wraper">
+    <h4 class="wp clearfix">
+      <p class="t">
+        <a href="enterprise.html" target="_blank">公司形象</a>
+      </p>
+    </h4>
+    {pc:get sql="SELECT pictureurls FROM v9_picture_data WHERE id='2'" cache="3600" return="data"}
+
+    <div class="pic-box clearfix">
+      <ul class="exhibition-list">
+
+    {loop $data $val}
+      <?php
+          $pictureurls=$val['pictureurls'];
+          $pictureurls=string2array($pictureurls);
+          $i=1;
+          $num=count($pictureurls);
+      ?>
+      {loop $pictureurls $pic}
+        <li <?php if($num==$i){?>class='last'<?php }?> >
+          <div class="exhibition-pic">
+            <a href="">
+              <img width="235" height="157" src="{$pic[url]}" alt="{$pic[alt]}">
+            </a>
+          </div>
+          <h3>
+            <a href="#">展台照片1</a>
+          </h3>
+        </li>
+        {php $i++}
+      {/loop}
+    {/loop}
+        
+      </ul>
+    </div>
+
+    {/pc}
+  </div>
+
+  <div class="wraper other_do clearfix">
+    <div class="ot_all">
+      <div class="ot_left fl">
+      {pc:get sql="SELECT * FROM v9_page where catid=23"}
+        {loop $data $key $val}
+        {$val[content]}
+        {/loop}
+      {/pc}
+      </div>
+      <div class="ot_left fl otherot_p">
+        <div class="thephone"></div>
+        <h3>联系我们</h3>
+      {pc:get sql="SELECT * FROM v9_page where catid=22"}
+        {loop $data $key $val}
+        {$val[content]}
+        {/loop}
+      {/pc}
+      </div>
+      <div class="ot_left no-border fl">
+        <div class="drlogo"></div>
+        <h3>最新新闻&活动</h3>
+        {pc:content action="lists" status="99" catid="25" num="4" order="listorder ASC, inputtime DESC"}
+        {loop $data $r}
+        <p><a href="{$r[url]}" title="{$r[title]}" {title_style($r[style])}>{str_cut($r[title],60,'')}</a></p>
+        {/loop}
+        {/pc}
+      </div>
+    </div>
+  </div>
+{template "content","footer"} 

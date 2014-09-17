@@ -1,0 +1,293 @@
+@charset "utf-8";
+/*Banner*/
+.HomeBan{ width:100%; height:474px; position:relative;}
+.HomeBan .BanList{ width:100%; height:474px;}
+#viewport, #box, .slide {
+	width:100%;
+	overflow:hidden;
+}
+.slide span{ display:block; width:100%; height:474px; }
+.slide a{ display:block; width:100%; height:474px; }
+
+/*Hban1_std*/
+.slide .Hban1{ width:1000px; height:484px; margin:0 auto; position:relative;}
+.slide .Hban1 .Hban1_std{ width:284px; height:200px; /*background:url(../img/Hban1_bg.jpg) no-repeat left top;*/ position:absolute;  bottom: 75px; left: 146px; padding:18px 11px;}
+.slide .Hban1 .Hban1_std p{ color:#888; font-size:14px; margin:0;}
+.slide .Hban1 .Hban1_std .Hban1_qh{ width:259px; height:135px; margin-top:10px; position:relative; z-index:0;}
+.slide .Hban1 .Hban1_std .Hban1_qh .Hban1_list{}
+.slide .Hban1 .Hban1_std .Hban1_qh .Hban1_list ul li{ overflow:hidden;}
+.slide .Hban1 .Hban1_std .Hban1_qh .Hban1_bg{ position:absolute; z-index:100; right:25px; bottom:7px;}
+.slide .Hban1 .Hban1_std .Hban1_qh .Hban1_bg ul li{ width:7px; height:7px; background:url(../img/dot_white.png) no-repeat left top; display:inline-block;}
+.slide .Hban1 .Hban1_std .Hban1_qh .Hban1_bg ul li.on{ background:url(../img/dot_red.png) no-repeat left top;}
+/*Hban1_std*/
+
+
+/*xilie*/
+.slide .xilie{ width:1000px; margin:0 auto;}
+.slide .xilie_zs{ width:252px; height:504px; float:right; background:url(../img/Hban2_bg.png) repeat-x left top;}
+.slide .xilie_zs .list_zs{ padding:60px 25px;}
+.slide .xilie_zs .list_zs p{ background:url(../img/xilie_zs.png) no-repeat left top; width:201px; height:65px;}
+.slide .xilie_zs .list_zs li{ color:#888; background:url(../img/dot.jpg) no-repeat 13px center; padding-left:16px;}
+.slide .xilie_zs .list_zs a{ color:#888;}
+.slide .xilie_zs .list_zs a.Btn{ background:url(../img/djck.jpg) no-repeat left top; width:123px; height:36px; cursor:pointer; float:left; margin-top:15px;}
+
+/*xilie*/
+
+#viewport {
+  overflow: hidden;
+  position: relative;
+}
+#viewport-shadow #prev,
+#viewport-shadow #next {
+	display:block;
+	background:url(../img/pro-slide-button.png) left top no-repeat;
+	width:60px;
+	height:100px;
+	position:absolute;
+	top:50%;
+	margin-top:-50px;
+	z-index:20;
+}
+#viewport-shadow #prev {
+	left:0;
+}
+#viewport-shadow #next {
+	background-position:right top;
+	right:0;
+}
+#viewport-controls {
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	text-align:center;	
+}
+#viewport-controls a {
+	display:inline-block;
+	background:url(../img/pro-slide-controls.png) left top no-repeat;
+	width:16px;
+	height:16px;	
+	margin:0 10px;
+	-moz-opacity:0.8 ;
+	filter:alpha(opacity: 80);
+	opacity: 0.8;
+}
+#viewport-controls a:hover,
+#viewport-controls a.active {
+	background-position:right top;
+}
+.HomeBan_Bottombg{ position:absolute; background:url(../img/Hbanner_bottom_bg.png) no-repeat center bottom; bottom:0; left:0; width:100%; height:12px;}
+
+.PBan{ padding:20px 0 10px; height:281px; overflow:hidden;}
+/*Banner*/
+
+/*Index*/
+.Hmain{ background:url(../img/Hmain_bg.jpg) no-repeat center top;  height:177px; width:100%;}
+.Hlist{ width:1000px; margin:0 auto; padding-top:20px;}
+.Hlist a{ float:left; display:block; width:315px; height:136px; padding-right:27px;}
+.Hlist a.end{ padding-right:0;}
+/*Index*/
+
+
+/*Sidebar*/
+.Menu{}
+/*Sidebar*/
+
+/*links*/
+.linklist{ }
+.linklist li{ width:160px;  height:130px; line-height:25px; text-align:center; float:left; padding:6px 30px;}
+.linklist li img{ padding:3px; border:1px solid #ccc; width:152px; height:93px;}
+
+
+/*sitemap*/
+.ul_sitemap li{ border-bottom:dotted 1px #ddd; padding:5px 0px;}
+.ul_sitemap li strong{ width:90px; display:inline-block;}
+
+
+.CustomerLeft{ float:left; width:536px;}
+.CTitle{ height:30px; line-height:30px; text-align:center;}
+.CTitle a{ display:inline-block; padding:0 100px; float:left; border-bottom:1px solid #d3d3d3; border-right:1px solid #d3d3d3; font-size:16px; color:#a56b10;}
+.CTitle a.ona{border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3; border-bottom:none;}
+.CTitle a.end{border-right:none;}
+.Cbox{  padding:15px 0; height:300px; width:500px;}
+.CustomerRight{ float:right; width:326px; height:345px;}
+	.focusBox { position: relative; width: 326px; height: 345px; overflow: hidden; font: 12px/1.5 Verdana, Geneva, sans-serif; text-align: left; background: white; }
+	.focusBox .pic img { width: 326px; height: 345px; display: block; }
+	.focusBox .num { position: absolute; z-index: 3; bottom: 8px; right: 8px; }
+	.focusBox .num li{ float: left; position: relative; width: 18px; height: 15px; line-height: 15px; overflow: hidden; text-align: center; margin-right: 1px; cursor: pointer; }
+	.focusBox .num li a,.focusBox .num li span { position: absolute; z-index: 2; display: block; color: white; width: 100%; height: 100%; top: 0; left: 0; text-decoration: none; }
+	.focusBox .num li span { z-index: 1; background: black; filter: alpha(opacity=50); opacity: 0.5; }
+	.focusBox .num li.on a,.focusBox .num a:hover{ background:#f60;  }
+
+.productlist{}
+.productlist li{ list-style:none; line-height:30px; text-align:center; width:163px; padding-bottom:20px; float:left; padding-right:9px;}
+.productlist li a.img{ width:161px; height:153px;border:1px solid #e2e2e2;display:block;}
+.productlist li a.img img{width:161px; height:153px;}
+.productlist li.ptop { width:332px;}
+.productlist li.ptop a.img{ width:330px; height:357px;}
+.productlist li.ptop a.img img{width:330px; height:357px;}
+
+	
+.Brandjoined{ margin-top:20px;}
+.BTitle{ height:30px; line-height:30px; text-align:center;}
+.BTitle a{ display:inline-block; padding:0 40px; border-bottom:1px solid #d3d3d3; border-right:none; font-size:16px; color:#a56b10;float:left; }
+.BTitle a.ona{border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3; border-bottom:none;border-left:1px solid #d3d3d3;}
+.BTitle a.end{ border-right:none;}
+.BTitle a.first{ border-left:none;}
+.BrandjoinedLeft{ float:left; width:300px;}
+.BrandjoinedRight{ float:right; width:550px;}
+.Bbox{ padding:20px 0; display:none;}
+
+.newlist{}
+.newlist li{ list-style:none; border-bottom:1px dashed #b4b3b3; height:120px; overflow:hidden; padding-top:15px;}
+.newimg{ float:left; width:152px; padding:3px; border:1px solid #dbdbdb;}
+.newimg img{ width:152px; height:93px;}
+.newtext{ float:right; width:510px;}
+.newtext h2{font-size:12px; font-weight:normal;}
+.newtext h2 a{ color:#c0264c; }
+.newtext h2 span{ color:#b3b3b3; float:right;}
+.newp{ margin:0; padding:0; height:55px; overflow:hidden;}
+.newmore{ color:#b3b3b3;} 
+
+.News_info{ padding:0px;}
+.News_info .info_title{ padding:0px; font-size:14px; text-align:center;}
+.News_info .info_time{ font-size:12px; text-align:center; color:#A1A1A1; font-weight:normal; border-bottom:1px dotted #ccc; padding-bottom:5px;}
+.News_info .info_txt{ }
+.News_info .info_txt{ text-justify:inter-ideograph; text-align:justify; word-wrap:break-word; clear:both;}
+.News_info .PrevNextBox{ line-height:23px;}
+.News_info .PrevNextBox .h1{ font-size:12px; font-weight:normal;}
+.News_info .PrevNextBox .h1 a{color:#725600;}
+.News_info .PrevNextBox a.none{ cursor:default;}
+.News_info .PrevNextBox a.none:hover{ color:#fd8902;}
+
+.Human_list{ min-height:700px; height:auto !important; height:700px;}
+.Human_list li{ padding:0 0 60px 0;}
+.Human_list li.last{ padding-bottom:0px;}
+.Human_list td{ padding:0px 15px; font-family:"微软雅黑"; line-height:20px;}
+.Human_list td.name{ width:92px; padding:0 0 10px 5px;}
+.Human_list tr.jobth{ background:#debe81; color:#888; height:35px;} 
+.Human_list tr.joblist td{ height:30px; border-bottom:1px dashed #b4b3b3; color:#A1A1A1;}
+/*.Human_list tr.joblist td a{ display:block; width:100%;}*/
+.Human_list .table1 .jobnr{overflow: hidden;margin: 0;padding: 20px 10px 50px;position: relative;width: 635px;display: none;}
+.Human_list .table1 .jobnr em{display: inline-block;float: right;width: 565px;overflow: hidden;_width: 560px;}
+.Human_list .table1 .jobnr .more{display: block;width: 91px;height: 26px; position: absolute;right: 30px;bottom: 20px; background:url(../img/join_apply.jpg) no-repeat left center;}
+
+.form_table{ margin:0 auto; width:100%; }
+.form_table .form_err{ color:#f00;}
+.form_table .text{ width:250px; height:24px; line-height:24px; border:1px solid #ccc; background:none; padding:0 5px;}
+.form_table .btn{ background:#F93; height:30px; line-height:30px; text-align:center; width:85px; margin-right:20px; color:#888; border:none; cursor:pointer }
+.form_table .textarea{ width:250px; height:100px; line-height:20px; border:1px solid #ccc; background:none; padding:0 5px; }
+
+
+/**/
+.Scroller{ height:470px; padding-top:20px;}
+.Scroller .Container { position:absolute; width:650px; height:470px;}
+.Scroller .Scroller-Container { position:absolute; width:650px;}
+.Scroller .Scrollbar-Up { cursor:pointer; position:absolute;}
+.Scroller .Scrollbar-Track { width:16px; height:470px; position:absolute; background:url(../img/H_videoLine.png) repeat-y center top;}
+.Scroller .Scrollbar-Handle { position:absolute; width:16px; height:16px; cursor:pointer; z-index:9999;}
+.Scroller .Scrollbar-Down { cursor:pointer; position:absolute; top:187px;}
+.Scroller #Scroller-1 { position:absolute; height:470px; overflow:hidden; width:650px;}
+.Scroller #Scrollbar-Container { position:absolute; margin:0px 0px 0px 660px;}
+
+.Scrollerpuduct{ height:600px; padding-top:20px;}
+.Scrollerpuduct .Container { position:absolute; width:650px; height:600px;}
+.Scrollerpuduct .Scroller-Container { position:absolute; width:650px;}
+.Scrollerpuduct .Scrollbar-Up { cursor:pointer; position:absolute;}
+.Scrollerpuduct .Scrollbar-Track { width:16px; height:600px; position:absolute; background:url(../img/H_videoLine.png) repeat-y center top;}
+.Scrollerpuduct .Scrollbar-Handle { position:absolute; width:16px; height:16px; cursor:pointer;}
+.Scrollerpuduct .Scrollbar-Down { cursor:pointer; position:absolute; top:187px;}
+.Scrollerpuduct #Scroller-2 { position:absolute; overflow:hidden; width:650px; height:600px;}
+.Scrollerpuduct #Scrollbar-Container2 { position:absolute; margin:0px 0px 0px 660px;}
+
+.Scrollercc{ height:410px; padding-top:20px;}
+.Scrollercc .Container { position:absolute; width:520px; height:410px;}
+.Scrollercc .Scroller-Container { position:absolute; width:520px;}
+.Scrollercc .Scrollbar-Up { cursor:pointer; position:absolute;}
+.Scrollercc .Scrollbar-Track { width:16px; height:410px; position:absolute; background:url(../img/H_videoLine.png) repeat-y center top;}
+.Scrollercc .Scrollbar-Handle { position:absolute; width:16px; height:16px; cursor:pointer;}
+.Scrollercc .Scrollbar-Down { cursor:pointer; position:absolute; top:187px;}
+.Scrollercc #Scroller-3 { position:absolute; overflow:hidden; width:520px; height:410px;}
+.Scrollercc #Scrollbar-Container3 { position:absolute; margin:0px 0px 0px 530px;}
+
+.Scrollercf{ height:310px; padding-top:20px;}
+.Scrollercf .Container { position:absolute; width:500px; height:310px;}
+.Scrollercf .Scroller-Container { position:absolute; width:500px;}
+.Scrollercf .Scrollbar-Up { cursor:pointer; position:absolute;}
+.Scrollercf .Scrollbar-Track { width:16px; height:310px; position:absolute; background:url(../img/H_videoLine.png) repeat-y center top;}
+.Scrollercf .Scrollbar-Handle { position:absolute; width:16px; height:16px; cursor:pointer;}
+.Scrollercf .Scrollbar-Down { cursor:pointer; position:absolute; top:187px;}
+.Scrollercf #Scroller-4 { position:absolute; overflow:hidden; width:500px; height:310px;}
+.Scrollercf #Scrollbar-Container4 { position:absolute; margin:0px 0px 0px 510px;}
+
+
+.wp  {
+	height: 28px;
+	font-family: "MicroSoft Yahei";
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 22px;
+	border-bottom: 1px solid #dfdfdf;
+	margin: 5px 0 10px;
+}
+.wp .t {
+	font-family: "MicroSoft Yahei";
+	font-size: 22px;
+	border-left: 4px solid #9d8948;
+	padding-left: 10px;
+	width: 200px;
+}
+
+.exhibition-pic {
+	width: 235px;
+	height: 157px;
+	overflow: hidden;
+	position: relative;
+}
+.exhibition-list h3 {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 30px;
+	height: 30px;
+	margin-top: 7px;
+	overflow: hidden;
+	text-align: center;
+}
+.exhibition-list li {
+	float: left;
+	display: inline;
+	margin-right: 20px;
+	width: 235px;
+	height: 195px;
+	overflow: hidden;
+}
+.exhibition-list .last{
+    margin-right: 0px;
+}
+.other_do{
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+.ot_all {
+    overflow: hidden;
+    padding: 24px 0;
+}
+.ot_left {
+    padding-top: 10px;
+    border-right: 1px solid #dbdbdb;
+    height: 200px;
+    text-align: center;
+    width: 325px;
+}
+.ot_left.otherot_p{
+	padding-left: 30px;
+	width: 295px;
+	text-align:left;
+}
+.ot_left .special_p {
+text-align: justify;
+padding-left: 78px;
+}
+.no-border {
+border: none;
+}

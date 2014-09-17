@@ -1,0 +1,67 @@
+{template "content","header"}
+  <!-- 标准头结束位置 -->
+
+
+  <div class="wraper clearfix">
+    <div class="bread-text fL">
+      <span>
+        <a href="index.html">首页</a>
+      </span> <em>&nbsp;&gt;&nbsp;</em>
+      <span>
+        <a id="nav-product-link" href="resuit.html">{$CATEGORYS[$catid]['catname']}</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="wraper clearfix">
+    <div class="content">
+      <div class="left-menu fL col-md-3">
+        <ul class="sub-menu-list">
+          <li class="sub-item active no-border">
+            <a href="">{$CATEGORYS[$catid]['catname']}</a>
+          </li>
+        </ul>
+      </div>
+      <style type="text/css">
+.recuit-list li{
+  border-bottom: 1px dashed #ddd;
+  padding-left: 18px;
+  line-height: 37px;
+  height: 39px;
+  overflow: hidden;
+  background: url("img/pro-slide-button.png") no-repeat 0px -105px;
+}
+.hot a{
+  color: red;
+}
+
+</style>  
+
+      <div class="right-cont fR col-md-9">
+            <div class="postHead clearfix">
+              <h1 id="artibodyTitle">{$CATEGORYS[$catid]['catname']}</h1>
+          </div>
+          <ul class="recuit-list">
+
+           {pc:content action="lists" status="99" catid="$catid" num="15" order="listorder ASC, inputtime DESC" page="$page"}
+            {loop $data $r}
+              <li class="sub-item {if $id==$r[id]}active{/if}">
+                <a href="{$r[url]}" {title_style($r[style])} >{str_cut($r[title],60,'')}</a>
+              </li>
+            {/loop}
+            {/pc}
+
+          </ul>
+          <div class="page-box fR">
+            {$pages}
+          </div>
+      </div>
+      
+    </div>
+     </div>
+
+
+
+
+<!-- 标准尾巴开始 -->
+  {template "content","footer"} 

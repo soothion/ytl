@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <link rel="stylesheet" href="{APP_PATH}statics/ytl/css/normalize.css">
+  <link href="{APP_PATH}statics/ytl/css/common.css" rel="stylesheet" type="text/css">
+  <link href="{APP_PATH}statics/ytl/css/home.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="{APP_PATH}statics/ytl/css/list.css">
+  <link rel="stylesheet" type="text/css" href="{APP_PATH}statics/ytl/css/jquery.fancybox.css">
+</head>
+<body>
+  <div id="Header">
+    <div class="top-wrap">
+      <div class="Top">
+        <a href="javascript:;" onclick="setHomepage('{siteurl($siteid)}');">设为首页</a><span>丨</span>
+        <a href="{siteurl($siteid)}" onclick="addFavorite(this.href, '盈泰来珠宝官网');return false;">收藏本站</a>
+        <span>丨</span>
+        <span>联系电话:      
+          {pc:get sql="SELECT * FROM v9_page where catid=26"}
+          {loop $data $key $val}
+          {$val[content]}
+          {/loop}
+          {/pc}
+        </span>
+      </div>
+    </div>
+    <div id="Toper">
+
+      <div class="logo">
+        <a href="{siteurl($siteid)}">
+          <img src="{APP_PATH}statics/ytl/img/logo.png"></a>
+      </div>
+
+  {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC, inputtime DESC"}
+      <div class="MainNav">
+        <ul>
+          <li <?php if(!isset($_GET['catid'])){?>class='onnav'<?php }?> >
+            <a class="nav" href="{siteurl($siteid)}">首页</a>
+          </li>
+      {loop $data $r}
+          <li {if $r[catid]==$catid}class="onnav"{/if}>
+            <em>|</em><a class="nav" href="{$r[url]}">{$r[catname]}</a> 
+            {if $r[child]}
+            {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC, inputtime DESC" return="subcat"}
+             <div class="subNavBox" style="display: none;">
+              <dl class="subnav">
+                {loop $subcat $v}
+                <dt>
+                  <a href="{$v[url]}">{$v[catname]}</a>
+                </dt>
+                {/loop}
+              </dl>
+              <div class="clear"></div>
+            </div>
+            {/pc}
+            {else}
+            {pc:content action="lists" status="99" catid="$r[catid]" num="10" order="listorder ASC, inputtime DESC" return="subcon"}
+              {if $subcon}
+              <div class="subNavBox" style="display: none;">
+                <dl class="subnav">
+                  {loop $subcon $r}
+                  <dt>
+                    <a href="{$r[url]}">{$r[title]}</a>
+                  </dt>
+                  {/loop}
+                </dl>
+                <div class="clear"></div>
+              </div>
+              {/if}
+            {/pc}  
+            {/if}
+          </li>
+      {/loop}
+          <div class="clear"></div>
+        </ul>
+      </div>
+  {/pc}
+
+      <div class="clear"></div>
+    </div>
+  </div>

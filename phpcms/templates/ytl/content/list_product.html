@@ -1,0 +1,80 @@
+{template "content","header"}
+  <!-- 标准头结束位置 -->
+
+
+     
+
+  <div class="wraper clearfix">
+    <div class="bread-text fL">
+      <span>
+        <a href="index.html">首页</a>
+      </span> <em>&nbsp;&gt;&nbsp;</em>
+      <span>
+        <a id="nav-product-link" href="">产品系列</a>
+      </span> <em>&nbsp;&gt;&nbsp;</em>
+      <span>
+        <a id="nav-sub-product-link" data-gid="728" href="{$CATEGORYS[$catid]['url']}">{$CATEGORYS[$catid]['catname']}</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="wraper clearfix">
+    <div class="content">
+      <div class="left-menu fL col-md-3">
+        <ul class="sub-menu-list">
+          {php $parentid = $CATEGORYS[$catid]['parentid']}
+          {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+          {loop $data $r}
+             <li class="sub-item {if $catid==$r[catid]}active{/if}">
+              <a href="{$r[url]}"><span>{$r[catname]}</span></a>
+            </li>
+          {/loop}
+          {/pc}
+
+        </ul>
+      </div>
+      <style type="text/css">
+      .productlist{}
+.productlist li{ list-style:none; line-height:30px; text-align:center; width:158px; padding-bottom:20px; float:left; margin-right:20px;}
+/*.productlist li { width:161px; height:153px;border:1px solid #e2e2e2;display:block;}*/
+.productlist li  img{width:156px; height:168px;border:1px solid #e2e2e2;display:block;}
+.productlist li.ptop { width:350px;}
+/*.productlist li.ptop a.img{ width:330px; height:357px;}*/
+.productlist li.ptop img{width:357px; height:388px;}
+.productlist li a.img img
+.padding-r11{padding-right: 11px !important;}
+</style>  
+      <div class="right-cont fR col-md-9">
+            <div class="postHead clearfix">
+              <h1 id="artibodyTitle">{$CATEGORYS[$catid]['catname']}</h1>
+          </div>
+          <ul class="productlist">
+
+
+           {pc:content action="lists" status="99" catid="$catid" num="15" order="listorder ASC, inputtime DESC" page="$page"}
+           {php $i=1}
+            {loop $data $r}
+              <li class="{if $i==1}ptop{/if} <?php if(in_array($i,array(3,5,9,13,17,21))){ ?>no-margin-r<?php }?>">
+                <a href="{$r[url]}"><img src="{$r[thumb]}"></a>
+                <a href="{$r[url]"><span>{$r[title]}</span></a>
+            </li>
+            {php $i++}
+            {/loop}
+            {/pc}
+
+            <div class="clear"></div>
+          </ul>
+          <div class="page-box fR">
+            {$pages}
+          </div>
+      </div>
+      
+    </div>
+     </div>
+
+
+
+
+<!-- 标准尾巴开始 -->
+   </div>
+{template "content","footer"} 

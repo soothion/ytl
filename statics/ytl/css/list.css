@@ -1,0 +1,74 @@
+.col-md-9 {
+width: 75%;
+}
+.col-md-3 {
+width: 20%;
+}
+.right-cont{
+	border: 1px solid #CDB978;
+	padding: 20px;
+}
+.sub-menu-list{
+	border: 1px solid #CDB978;
+	/*border-right: 0px;*/
+}
+.sub-menu-list li{
+	list-style: none;
+	border-bottom: 1px solid #d7d7d7;
+	/*padding-left: 15px;*/
+	position: relative;
+	height: 34px;
+	line-height: 32px;
+	text-align: center;
+}
+.active{
+	background: #CDB978;
+}
+.active a{
+	color: #fff;
+}
+.bread-text{
+	margin: 10px 0 10px;
+}
+.bread-text em{
+	font-family: '宋体';
+}
+.postcon{
+	font-size: 14px;
+}
+.postcon .img_1{
+	text-align: center;
+}
+#artibodyTitle{
+	margin: 0px 0px 20px 0px;
+	border-bottom: 1px solid #e6e6e6;
+	height: 30px;
+	padding: 10px 0px 10px 10px;
+}
+.Mblk_cmnt{
+	width: 100%;
+}
+.Mblk_cmnt .comment_item_cont .t_content{
+	width: auto;
+}
+.Mblk_cmnt .post_box_top{
+	width: auto;
+}
+.Mblk_cmnt .post_box_showall textarea{
+	width:100%
+}
+.comment{
+	margin-top: 20px;
+}
+
+.culture-type{
+  font-size: 18px;
+}
+.em{
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+.img_1 img{
+  width: 100%;
+}
