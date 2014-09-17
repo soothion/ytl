@@ -9,7 +9,7 @@
         <a id="nav-product-link" href="<?php echo $CATEGORYS[$catid]['url'];?>"><?php echo $CATEGORYS[$catid]['catname'];?></a>
       </span> <em>&nbsp;&gt;&nbsp;</em>
       <span>
-        <a id="nav-sub-product-link" data-gid="728" ><?php echo $title;?></a>
+        <a id="nav-sub-product-link" data-gid="728"><?php echo $title;?></a>
       </span>
     </div>
   </div>

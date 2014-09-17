@@ -59,7 +59,7 @@
             </div>
             {/pc}
             {else}
-            {pc:content action="lists" status="99" catid="$r[catid]" num="10" order="listorder ASC, inputtime DESC" return="subcon"}
+            {pc:content action="position" posid="10" catid="$r[catid]" num="10" order="listorder ASC" return="subcon"}
               {if $subcon}
               <div class="subNavBox" style="display: none;">
                 <dl class="subnav">
