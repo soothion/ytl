@@ -1,0 +1,8 @@
+{pc:content action="lists" catid="$catid" num="1" siteid="$siteid" order="listorder ASC"}
+
+<?php
+    $data=array_shift($data);
+    $url=$data[url];
+    header('Location:'.$url);
+?>
+{/pc}
