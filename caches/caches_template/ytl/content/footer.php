@@ -1,7 +1,7 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><!-- 标准尾巴开始 -->
   <div class="last_foot">
     <div id="Copyright" class="auto">
-      <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=d139ef757fe24ed4e77ca472e2ed1e20&sql=SELECT+%2A+FROM+v9_page+where+catid%3D21\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT * FROM v9_page where catid=21 LIMIT 20");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
+      <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=d139ef757fe24ed4e77ca472e2ed1e20&sql=SELECT+%2A+FROM+v9_page+where+catid%3D21\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT * FROM v9_page where catid=21 LIMIT 20");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
         <?php $n=1; if(is_array($data)) foreach($data AS $key => $val) { ?>
         <?php echo $val['content'];?>
         <?php $n++;}unset($n); ?>

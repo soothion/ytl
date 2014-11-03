@@ -5,7 +5,7 @@ return array (
     'siteid' => '1',
     'name' => '默认站点',
     'dirname' => '',
-    'domain' => 'http://localhost/ytl/',
+    'domain' => 'http://124.173.71.30/ytl/',
     'site_title' => '盈泰来珠宝',
     'keywords' => '盈泰来珠宝',
     'description' => '盈泰来珠宝',
@@ -24,7 +24,7 @@ return array (
   \'watermark_pos\' => \'9\',
 )',
     'uuid' => '7f38d876-3bc3-11e4-9a3e-447168b75dad',
-    'url' => 'http://localhost/ytl/',
+    'url' => 'http://124.173.71.30/ytl/',
   ),
 );
 ?>

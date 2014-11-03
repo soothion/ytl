@@ -5,7 +5,7 @@ return array (
 		'hostname' => '127.0.0.1',
 		'database' => 'ytl',
 		'username' => 'root',
-		'password' => '',
+		'password' => 'doraprince',
 		'tablepre' => 'v9_',
 		'charset' => 'utf8',
 		'type' => 'mysql',
